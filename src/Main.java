@@ -1,7 +1,9 @@
 public class Main {
     public static void main(String[] args) {
 
-        //Zadanie 1
+        /*
+
+        Zadanie 1
 
         UserValidator validator = new UserValidator();
         validator.addRule(form -> form.email().contains("@"));
@@ -11,8 +13,12 @@ public class Main {
         UserForm form = new UserForm("anna@example.com", "bezpieczne123", 20);
         System.out.println(validator.isValid(form));
 
+         */
 
-        //Zadanie 2
+
+        /*
+
+        Zadanie 2
 
         ServiceOrder order = new ServiceOrder("Firma Alfa", 10, 120.0);
         PriceCalculator calculator = new PriceCalculator();
@@ -24,6 +30,23 @@ public class Main {
         System.out.println(calculator.calculate(order, standard));
         System.out.println(calculator.calculate(order, discount));
         System.out.println(calculator.calculate(order, weekend));
+
+         */
+
+        //Zadanie 3
+
+        Order order = new Order("ORD-100", "Anna Kowalska");
+
+        order.addItem(new Order.OrderItem("Klawiatura", 249.99, 1));
+        order.addItem(new Order.OrderItem("Mysz", 99.99, 2));
+
+        OrderSummary summary = new OrderSummary(
+                order.getOrderNumber(),
+                order.getCustomerName(),
+                order.total()
+        );
+
+        System.out.println(summary);
 
     }
 }
