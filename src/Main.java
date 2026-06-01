@@ -33,7 +33,7 @@ public class Main {
 
          */
 
-        //Zadanie 3
+        /*Zadanie 3
 
         Order order = new Order("ORD-100", "Anna Kowalska");
 
@@ -47,6 +47,20 @@ public class Main {
         );
 
         System.out.println(summary);
+
+         */
+
+        /* Zadanie 4
+
+        LibraryAccount account = new LibraryAccount("Jan Nowak", 3, 5);
+        LibraryAccount.FineCalculator calculator = account.new FineCalculator();
+
+        double fine = calculator.calculate();
+
+        MessagePrinter printer = message -> System.out.println("[BIBLIOTEKA] " + message);
+        printer.print("Czytelnik: " + account.getReaderName() + ", opłata: " + fine + " zł");
+
+         */
 
     }
 }
